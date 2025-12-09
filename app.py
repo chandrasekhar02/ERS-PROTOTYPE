@@ -294,7 +294,7 @@ with tab_overview:
     st.download_button("Download top-K CSV", data=csv_bytes, file_name="topk_ers.csv", mime="text/csv")
 
     st.markdown("**Portfolio table**")
-    display_cols = ['customer_id','credit_limit','util_pct','avg_payment_ratio','ERS_score','ERS_risk_tier','dpd_bucket_next_month','P7_dpd_severity']
+    display_cols = ['customer_id','credit_limit','util_pct','avg_payment_ratio','dpd_bucket_next_month','P7_dpd_severity','ERS_score','ERS_risk_tier']
     if AGGRID_OK:
         gb = GridOptionsBuilder.from_dataframe(df_flags[display_cols])
         gb.configure_default_column(filter=True, sortable=True, resizable=True)
